@@ -2,23 +2,72 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/ico" href="/smoke.ico" />
+    <!-- <link rel="icon" type="image/ico" href="/smog.ico" /> -->
+    <link rel="icon" type="image/ico" href="/favicon.ico" />
+    <link rel="stylesheet" href="/src/style.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script type="module" src="/src/main.js" defer></script>
+    <script src="/src/slider.js" defer></script>
+    <link rel="stylesheet" href="/src/slider.css" />
     <title>Review Client</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
-    <!-- had a moment with myself debating the pros and cons putting anciliary visuals inside or outside the #app div, but i settled on outside. seems more convenient/useful? -->
     <header>
       <nav>
         <ul>
-          <li></li>
+          <li>
+            <a href="#"><img src="#" />Fog</a>
+          </li>
+          <li><a href="#">Store</a></li>
+          <li><a href="#">Community</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Support</a></li>
         </ul>
       </nav>
     </header>
-
     <main>
-      <div id="app"></div>
+      <section id="storePage">
+        <div id="imgContainer"></div>
+      </section>
+      <section id="reviewsContainer">
+        <form name="reviewForm" id="reviewForm">
+          <label for="name">Name:</label>
+          <input name="name" id="name" type="text" required />
+
+          <label for="rating">Rating</label>
+          <input name="rating" type="radio" value="1" required />
+          <input name="rating" type="radio" value="2" required />
+          <input name="rating" type="radio" value="3" required />
+          <input name="rating" type="radio" value="4" required />
+          <input name="rating" type="radio" value="5" required />
+
+          <label for="reviewText">Review:</label>
+          <input name="reviewText" id="reviewText" type="text" required />
+
+          <button name="submitBtn" type="submit">i am buoton</button>
+        </form>
+
+        <ul id="reviewsList">
+          <li class="review">
+            <div class="username">
+              <img src="#" />
+              <p>Player1</p>
+            </div>
+            <div class="rating">
+              <p>5</p>
+            </div>
+            <div class="reviewText">
+              <p>reviw text defautl</p>
+            </div>
+          </li>
+        </ul>
+      </section>
     </main>
   </body>
 </html>

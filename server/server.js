@@ -12,24 +12,29 @@ const db = new pg.Pool({
   connectionString: process.env.DB_CONN,
 });
 
-app.listen(8080, (req, res) => {
-  console.log(`listening on port 8080`);
-}); // yeah i wanted to do a funny number but couldn't think of one. 6969 is inappropriate, 0420 and 0451 are too low, 1337 is played, y'know?
-
 app.get(`/`, (req, res) => {
   console.log(`GET requested to /`);
-  res.status(200).send(`GET requested to / successfully`);
+  res.send(`GET requested to / successfully`);
 });
 
-app.get(`/reviews`, (req, res) => {
-  console.log(`GET requested to /reviews`);
-  res.status(200).send(`GET requested to /reviews successfully`);
+app.get("/reviews", async (req, res) => {
+  const data = await db.query(`SELECT * FROM reviews`);
+  const messages = data.rows;
+  res.status(200).json(messages);
 });
 
-app.post(`/reviews`, async (req, res) => {
-  const submissionData = req.body;
-  const query = await db.query(
-    `INSERT INTO reviews (name, rating, review) VALUES ($1, $2, $3)`,
-    [submissionData.name, submissionData.rating, submissionData.review],
+app.post("/reviews", async (req, res) => {
+  const userData = req.body;
+  console.log(userData);
+
+  const dbQuery = await db.query(
+    `INSERT INTO reviews (name, rating, reviewText) VALUES ($1, $2, $3)`,
+    [userData.name, Number(userData.rating), userData.reviewText],
   );
+
+  res.status(200).json({ message: "added message" });
+});
+
+app.listen(8085, (req, res) => {
+  console.log(`listening on port 8080`);
 });

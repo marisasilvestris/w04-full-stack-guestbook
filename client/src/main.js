@@ -1,14 +1,56 @@
-const url = `http://localhost:8080`;
+const display = document.getElementById(`reviewsList`);
+const form = document.getElementById(`reviewForm`);
+
+const baseURL = `http://localhost:8085`;
 
 async function fetchData() {
-  const res = (await fetch(`${url}/reviews`)).json();
-  return res;
+  const response = await fetch(`${baseURL}/reviews`);
+  const messages = await response.json();
+
+  return messages;
 }
 
-// async function showEntries() {
-//   const reviewList = await fetchData();
-//   reviewList.forEach((review) => {
-//     console.log(review);
-//   });
-// }
-// showEntries();
+function buildReview(username, rating, reviewText) {
+  const reviewItem = document.createElement(`li`);
+  reviewItem.classList.add(`review`);
+  reviewItem.innerHTML = `<div class="username">
+              <img src="#" />
+              <p>${username}</p>
+            </div>
+            <div class="rating">
+              <p>${rating}</p>
+            </div>
+            <div class="reviewText">
+              <p>${reviewText}</p>
+            </div>`;
+  display.appendChild(reviewItem);
+}
+
+async function showEntries() {
+  const reviewList = await fetchData();
+  reviewList.forEach((review) => {
+    buildReview(review.name, review.rating, review.reviewtext);
+    console.log(review);
+  });
+}
+showEntries();
+
+async function reviewSubmit(event) {
+  event.preventDefault();
+
+  const formData = new FormData(form);
+  const userInput = Object.fromEntries(formData);
+  const userInputJSON = JSON.stringify(userInput);
+
+  const response = await fetch(`${baseURL}/reviews`, {
+    headers: {
+      "Content-Type": "application/json",
+    },
+    method: "POST",
+    body: userInputJSON,
+  });
+  const res = await response.json();
+  window.location.reload();
+}
+
+form.addEventListener(`submit`, reviewSubmit);

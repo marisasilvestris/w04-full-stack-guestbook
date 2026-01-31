@@ -1,0 +1,51 @@
+#imgContainer {
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+  height: fit-content;
+}
+#imgHeroContainer {
+  position: relative;
+  display: flex;
+  gap: 10px;
+  margin: 10px;
+  width: 500px;
+  height: 250px;
+}
+#imgHero {
+  width: 100%;
+  object-fit: cover;
+}
+#imgThumbs {
+  display: flex;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  align-self: center;
+  list-style: none;
+}
+#leftBtn,
+#rightBtn {
+  width: 4em;
+  height: 4em;
+  flex-shrink: 0;
+  background-repeat: no-repeat;
+  background-position: center;
+  align-self: center;
+  position: absolute;
+}
+#leftBtn {
+  background: green;
+  left: 0;
+}
+#rightBtn {
+  background: red;
+  right: 0;
+}
+.thumb {
+  height: 50px;
+}
+
+.thumb img {
+  height: 100%;
+  object-fit: cover;
+}
