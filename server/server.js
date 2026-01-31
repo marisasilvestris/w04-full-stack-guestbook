@@ -35,6 +35,6 @@ app.post("/reviews", async (req, res) => {
   res.status(200).json({ message: "added message" });
 });
 
-app.listen(8085, (req, res) => {
+app.listen(8080, (req, res) => {
   console.log(`listening on port 8080`);
 });
