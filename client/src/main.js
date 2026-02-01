@@ -1,8 +1,8 @@
 const display = document.getElementById(`reviewsList`);
 const form = document.getElementById(`reviewForm`);
 
-// const baseURL = `https://w04-full-stack-guestbook.onrender.com`;
-const baseURL = `http://localhost:8080`;
+const baseURL = `https://w04-full-stack-guestbook.onrender.com`;
+// const baseURL = `http://localhost:8080`;
 
 async function fetchData() {
   const response = await fetch(`${baseURL}/reviews`);
