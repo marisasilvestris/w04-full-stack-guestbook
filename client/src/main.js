@@ -1,8 +1,8 @@
 const display = document.getElementById(`reviewsList`);
 const form = document.getElementById(`reviewForm`);
 
-const baseURL = `https://w04-full-stack-guestbook.onrender.com`;
-// const baseURL = `http://localhost:8080`;
+// const baseURL = `https://w04-full-stack-guestbook.onrender.com`;
+const baseURL = `http://localhost:8080`;
 
 async function fetchData() {
   const response = await fetch(`${baseURL}/reviews`);
@@ -14,15 +14,19 @@ async function fetchData() {
 function buildReview(username, rating, reviewText) {
   const reviewItem = document.createElement(`li`);
   reviewItem.classList.add(`review`);
-  reviewItem.innerHTML = `<div class="username">
-              <img src="#" />
-              <p>${username}</p>
+  reviewItem.innerHTML = `<div class="left">
+              <div class="username">
+                <img src="#" />
+                <p>${username}</p>
+              </div>
             </div>
-            <div class="rating">
-              <p>${rating}</p>
-            </div>
-            <div class="reviewText">
-              <p>${reviewText}</p>
+            <div class="right">
+              <div class="rating">
+                <p>${rating}</p>
+              </div>
+              <div class="review-text">
+                <p>${reviewText}</p>
+              </div>
             </div>`;
   display.appendChild(reviewItem);
 }

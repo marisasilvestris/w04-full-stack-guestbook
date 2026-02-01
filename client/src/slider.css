@@ -18,10 +18,7 @@
 #rightBtn {
   width: 0;
   height: 0;
-  flex-shrink: 0;
   background-color: transparent;
-  background-repeat: no-repeat;
-  background-position: center;
   align-self: center;
   position: absolute;
   border: 0;
@@ -30,13 +27,13 @@
   left: 15px;
   border-top: 50px solid transparent;
   border-bottom: 50px solid transparent;
-  border-right: 30px solid white;
+  border-right: 30px solid rgba(254, 254, 254, 0.5);
 }
 #rightBtn {
   right: 15px;
   border-top: 50px solid transparent;
   border-bottom: 50px solid transparent;
-  border-left: 30px solid white;
+  border-left: 30px solid rgba(254, 254, 254, 0.5);
 }
 #imgThumbs {
   display: flex;
