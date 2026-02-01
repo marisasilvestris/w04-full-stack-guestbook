@@ -31,6 +31,7 @@ app.post("/reviews", async (req, res) => {
     `INSERT INTO reviews (name, rating, reviewText) VALUES ($1, $2, $3)`,
     [userData.name, Number(userData.rating), userData.reviewText],
   );
+  // i'll be honest, i don't actually understand the line about. dbQuery doesn't ever get used, but is essential? i'm assuming it gets used by express or postgres or something
 
   res.status(200).json({ message: "added message" });
 });

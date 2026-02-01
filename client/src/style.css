@@ -136,6 +136,7 @@ main {
 #productBody {
   display: flex;
   flex-flow: row nowrap;
+  gap: 15px;
   padding: 15px;
   background-color: var(--grey);
 }

@@ -1,12 +1,13 @@
+// leaving this array as-is rather than switching to a json import function because i don't have time to break everything
 const images = [
   {
     title: "alfalfa",
-    src: "./src/img/cat0.webp",
+    src: "https://msnicelupe.neocities.org/vault/guestbook/slider/cat0.webp",
     alt: "alfalfa the cat, acting extremely Normal",
   },
   {
     title: "zimmerman",
-    src: "./src/img/cat2.webp",
+    src: "https://msnicelupe.neocities.org/vault/guestbook/slider/cat2.webp",
     alt: "zimmerman the cat, a lovely marshmallow boy lounging lazily on a rug and gazing just off frame.",
   },
 ];
