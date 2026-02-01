@@ -1,3 +1,185 @@
+:root {
+  --headerfont: "Montserrat Alternates", sans-serif;
+  --bodyfont: "Montserrat";
+
+  --white: #fefefe;
+  --black: #35323c;
+  --purple: #886eb2;
+  --lavender: #aa7fb7;
+  --lilac: #bdaccb;
+  --peony: #eacbef;
+  --pale: #d7cfe7;
+  --grey: #6f6a7f;
+}
+.gradient-72 {
+  background-image: linear-gradient(
+    72deg,
+    rgba(255, 255, 255, 0),
+    rgba(255, 255, 255, 0.3)
+  );
+}
+.gradient-180 {
+  background-image: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0),
+    rgba(255, 255, 255, 0.3)
+  );
+}
+.drop-shadow {
+  box-shadow: 2px 2px 8px rgba(255, 255, 255, 0.8);
+}
 * {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+header {
+  font-family: var(--headerfont);
+  color: var(--white);
+}
+body {
+  background-color: var(--black);
+}
+body a {
+  color: var(--peony);
+}
+body > * {
+  margin: 0 auto;
+}
+
+header {
+  background-color: var(--lavender);
+}
+header nav {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 15px 0 15px 0;
+  text-transform: uppercase;
+}
+header nav ul {
+  list-style-type: none;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  gap: 15px;
+}
+header nav ul li:first-of-type {
+  margin-right: 50px;
+  font-size: 1.4em;
+}
+header nav a {
+  color: var(--white);
+  text-decoration: none;
+  line-height: 64px; /* dodgy way to get around a vertical misalignment that i couldn't quite diagnose */
+}
+header nav img {
+  vertical-align: middle;
+  padding-right: 5px;
+}
+
+main {
+  max-width: 1200px;
+}
+#productPage {
+  color: var(--white);
+}
+#productPageTitle {
+  margin: 25px 0 25px 0;
+}
+#productPageTop {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 15px;
+  padding: 15px;
+  background-color: var(--grey);
+}
+#imgContainer {
+  flex-basis: 70%;
+  background-color: var(--black);
+}
+#productBrief {
+  display: flex;
+  flex-flow: column nowrap;
+  flex-basis: 30%;
+  font-family: var(--bodyfont);
+}
+#productBriefImg {
+}
+#productBriefDesc {
+  padding: 10px;
+  margin: 10px;
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 15px;
+}
+
+#productBody {
+  display: flex;
+  flex-flow: column nowrap;
+}
+#productBodyLeft {
+  width: 100%;
+}
+
+/* review-form-specific style */
+#reviewsContainer * {
+  border: 1px solid var(--white);
+}
+
+#reviewForm {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 15px; /* 15px just seems like a comfortable, sensible amount. you'll see me use it everywhere like a visual crutch */
+  padding: 10px;
+  margin: 20px;
+  border: 1px solid var(--purple);
+  background-color: var(--lavender);
+  border-radius: 3px;
+  font-family: var(--bodyfont);
+}
+#reviewForm label {
+  vertical-align: top;
+}
+#reviewForm span {
+  display: flex;
+  gap: 15px;
+}
+#reviewForm #reviewSpan textarea {
+  height: 15em;
+  width: 100%;
+  max-width: 50em;
+}
+#reviewForm button {
+}
+
+#reviewsList {
+  display: flex;
+  flex-flow: column nowrap;
+  list-style-type: none;
+  gap: 15px;
+  padding: 15px;
+}
+.review {
+  display: flex;
+  flex-flow: row nowrap;
+  background: lightblue;
+}
+.review .left {
+  flex-shrink: 0;
+}
+.review .right {
+  flex-grow: 1;
+}
+.review .username {
   font-family: "Montserrat Alternates", sans-serif;
+  font-size: 14px;
+}
+.review .rating {
+}
+.review .review-text {
 }

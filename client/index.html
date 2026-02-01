@@ -3,26 +3,29 @@
   <head>
     <meta charset="UTF-8" />
     <!-- <link rel="icon" type="image/ico" href="/smog.ico" /> -->
-    <link rel="icon" type="image/ico" href="/favicon.ico" />
+    <link rel="icon" type="image/ico" href="/favicon-dev.ico" />
+    <!-- <link rel="icon" type="image/ico" href="/favicon.ico" /> -->
     <link rel="stylesheet" href="./src/style.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script type="module" src="./src/main.js" defer></script>
-    <script type="module" src="./src/slider.js" defer></script>
+    <script type="module" src="./src/slider.js" defer></script> <!-- remember this guy? -->
     <link rel="stylesheet" href="./src/slider.css" />
     <title>Review Client</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-      rel="stylesheet"
-    />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
   </head>
   <body>
-    <header>
+    <header class="gradient-180">
       <nav>
         <ul>
           <li>
-            <a href="#"><img src="#" />Fog</a>
+            <a href="#"
+              ><img
+                alt="Smog homepage"
+                src="./src/img/smog-logo-transparent-64.png"
+              />Smog</a
+            >
           </li>
           <li><a href="#">Store</a></li>
           <li><a href="#">Community</a></li>
@@ -32,38 +35,87 @@
       </nav>
     </header>
     <main>
-      <section id="storePage">
-        <div id="imgContainer"></div>
+      <section id="productPage">
+        <h1 id="productPageTitle">skeleton puncher xiv</h1>
+        <div id="productPageTop">
+          <div id="imgContainer"></div>
+          <div id="productBrief">
+            <img id="productBriefImg" src="http://placecats.com/300/150" />
+            <div id="productBriefDesc">
+              <p>a sinister presence lurks within all of us...</p>
+              <p>
+                from the developers of
+                <i><a href="#">"journey to slimecrunch"</a></i> comes a hit new
+                action mmo rpg roguelite military farming simulator -
+                <i>skeleton puncher xiv</i>
+              </p>
+            </div>
+          </div>
+        </div>          <form name="reviewForm" id="reviewForm" class="gradient-72 drop-shadow">
+<h3>a review for yer trouble, guvna?</h3>
+            <span id="nameSpan">
+              <label for="name">name</label>
+              <input name="name" type="text" required />
+            </span>
+
+            <span id="ratingSpan">
+              <label for="rating">rating</label>
+              <input name="rating" type="radio" value="1" required />
+              <input name="rating" type="radio" value="2" required />
+              <input name="rating" type="radio" value="3" required />
+              <input name="rating" type="radio" value="4" required />
+              <input name="rating" type="radio" value="5" required />
+            </span>
+
+            <span id="reviewSpan">
+              <label for="reviewText">review</label>
+              <textarea name="reviewText" required>
+type ur review here pls!</textarea
+              >
+            </span>
+
+            <button name="submitBtn" type="submit">i am buoton</button>
+          </form>
+        <div id="productBody">
+
+          <div id="productBodyLeft">
+            <div id="buyBtnContainer">
+              <button id="buyBtn">play now</button>
+            </div>
+            <div id="productDesc">
+              <h3>About This Game</h4>
+              <img src="http://placecats.com/1200/250" class="productImg" />
+              <p>
+                the skeletons are atacking! fend them littel rascals off w/ ur
+                bear fists
+              </p>
+              <h4>sternum-pounding action!</h5>
+              <img src="http://placecats.com/1200/250" class="productImg" />
+              <p></p>
+              <h4>pvp mode!</h5>
+              <img src="http://placecats.com/1200/250" class="productImg" />
+              <p></p>
+            </div>
+          </div>
+          <div id="productBodyRight">test</div>
+        </div>
       </section>
       <section id="reviewsContainer">
-        <form name="reviewForm" id="reviewForm">
-          <label for="name">Name:</label>
-          <input name="name" id="name" type="text" required />
-
-          <label for="rating">Rating</label>
-          <input name="rating" type="radio" value="1" required />
-          <input name="rating" type="radio" value="2" required />
-          <input name="rating" type="radio" value="3" required />
-          <input name="rating" type="radio" value="4" required />
-          <input name="rating" type="radio" value="5" required />
-
-          <label for="reviewText">Review:</label>
-          <input name="reviewText" id="reviewText" type="text" required />
-
-          <button name="submitBtn" type="submit">i am buoton</button>
-        </form>
-
         <ul id="reviewsList">
           <li class="review">
-            <div class="username">
-              <img src="#" />
-              <p>Player1</p>
+            <div class="left">
+              <div class="username">
+                <img src="#" />
+                <p>I Am A Hardcoded Listing</p>
+              </div>
             </div>
-            <div class="rating">
-              <p>5</p>
-            </div>
-            <div class="reviewText">
-              <p>reviw text defautl</p>
+            <div class="right">
+              <div class="rating">
+                <p>5</p>
+              </div>
+              <div class="review-text">
+                <p>reviw text defautl</p>
+              </div>
             </div>
           </li>
         </ul>

@@ -1,20 +1,42 @@
 #imgContainer {
   display: flex;
   flex-direction: column;
-  width: fit-content;
-  height: fit-content;
+  position: relative;
 }
 #imgHeroContainer {
   position: relative;
   display: flex;
-  gap: 10px;
-  margin: 10px;
-  width: 500px;
-  height: 250px;
+  width: 100%;
+  height: 100%;
 }
 #imgHero {
   width: 100%;
   object-fit: cover;
+  aspect-ratio: 16 / 9;
+}
+#leftBtn,
+#rightBtn {
+  width: 0;
+  height: 0;
+  flex-shrink: 0;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: center;
+  align-self: center;
+  position: absolute;
+  border: 0;
+}
+#leftBtn {
+  left: 15px;
+  border-top: 50px solid transparent;
+  border-bottom: 50px solid transparent;
+  border-right: 30px solid white;
+}
+#rightBtn {
+  right: 15px;
+  border-top: 50px solid transparent;
+  border-bottom: 50px solid transparent;
+  border-left: 30px solid white;
 }
 #imgThumbs {
   display: flex;
@@ -22,27 +44,10 @@
   overflow-y: hidden;
   align-self: center;
   list-style: none;
-}
-#leftBtn,
-#rightBtn {
-  width: 4em;
-  height: 4em;
-  flex-shrink: 0;
-  background-repeat: no-repeat;
-  background-position: center;
-  align-self: center;
-  position: absolute;
-}
-#leftBtn {
-  background: green;
-  left: 0;
-}
-#rightBtn {
-  background: red;
-  right: 0;
+  margin: 0;
 }
 .thumb {
-  height: 50px;
+  height: 80px;
 }
 
 .thumb img {
