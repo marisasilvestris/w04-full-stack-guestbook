@@ -72,46 +72,6 @@
         </div>
         <!-- BUY BTN END -->
 
-        <!-- FORM BLOCK -->
-        <!-- i kinda struggled with where to pop this. on the one hand i wanted the steam-like layout, but honestly to me it makes way more sense for it to be above the reviewsList. still, it can be moved around quite easily. -->
-        <form name="reviewForm" id="reviewForm" class="gradient-72 drop-shadow">
-          <h3>Review this product</h3>
-          <div id="nameBlock">
-            <label for="formName">name</label>
-            <input
-              id="formName"
-              name="name"
-              type="text"
-              placeholder="type ur name here pls!"
-              required
-            />
-
-            <div id="ratingBlock">
-              <label for="rating">rating</label>
-              <input name="rating" type="radio" value="1" required />
-              <input name="rating" type="radio" value="2" required />
-              <input name="rating" type="radio" value="3" required />
-              <input name="rating" type="radio" value="4" required />
-              <input name="rating" type="radio" value="5" required />
-            </div>
-          </div>
-
-          <div id="reviewBlock">
-            <label for="formReviewText">review</label>
-            <!-- not sure why this is missing a few pixels of width? -->
-            <textarea
-              id="formReviewText"
-              name="reviewText"
-              placeholder="type ur review here pls!"
-              required
-            ></textarea>
-          </div>
-          <button name="submitBtn" type="submit" class="gradient-288">
-            Submit
-          </button>
-        </form>
-        <!-- FORM BLOCK END -->
-
         <!-- PRODUCT BODY -->
         <div id="productBody">
           <div class="left">
@@ -151,6 +111,45 @@
         <!-- PRODUCT BODY END-->
       </section>
       <section id="reviewsContainer" class="gradient-72">
+        <!-- FORM BLOCK -->
+        <!-- i kinda struggled with where to pop this. on the one hand i wanted the steam-like layout, but honestly to me it makes way more sense for it to be above the reviewsList. still, it can be moved around quite easily. -->
+        <form name="reviewForm" id="reviewForm" class="gradient-72 drop-shadow">
+          <h3>Review this product</h3>
+          <div id="nameBlock">
+            <label for="formName">name</label>
+            <input
+              id="formName"
+              name="name"
+              type="text"
+              placeholder="type ur name here pls!"
+              required
+            />
+
+            <div id="ratingBlock">
+              <label for="rating">rating</label>
+              <input name="rating" type="radio" value="1" required />
+              <input name="rating" type="radio" value="2" required />
+              <input name="rating" type="radio" value="3" required />
+              <input name="rating" type="radio" value="4" required />
+              <input name="rating" type="radio" value="5" required />
+            </div>
+          </div>
+
+          <div id="reviewBlock">
+            <label for="formReviewText">review</label>
+            <!-- not sure why this is missing a few pixels of width? -->
+            <textarea
+              id="formReviewText"
+              name="reviewText"
+              placeholder="type ur review here pls!"
+              required
+            ></textarea>
+          </div>
+          <button name="submitBtn" type="submit" class="gradient-288">
+            Submit
+          </button>
+        </form>
+        <!-- FORM BLOCK END -->
         <ul id="reviewsList">
           <li class="review">
             <div class="left">
