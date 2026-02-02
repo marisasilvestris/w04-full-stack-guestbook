@@ -3,12 +3,12 @@ const images = [
   {
     title: "moon princess barbara battle",
     src: "https://msnicelupe.neocities.org/vault/guestbook/product/elder%20barbara.webp",
-    alt: "alfalfa the cat, acting extremely Normal",
+    alt: "get 'er, bonelad!",
   },
   {
-    title: "alfalfa",
-    src: "https://msnicelupe.neocities.org/vault/guestbook/slider/cat0.webp",
-    alt: "alfalfa the cat, acting extremely Normal",
+    title: "you died",
+    src: "https://msnicelupe.neocities.org/vault/guestbook/product/youre%20boned.webp",
+    alt: "got no bones left",
   },
   {
     title: "zimmerman",

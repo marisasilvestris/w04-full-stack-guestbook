@@ -229,6 +229,7 @@ main {
 #reviewForm label {
   text-transform: capitalize;
   width: 75px;
+  align-self: center;
 }
 #reviewForm div {
   display: flex;
@@ -300,16 +301,20 @@ footer {
 /* yeah yeah don't get me wrong, i know at this point it seems like i'm abdicating the requirement of mobile-friendliness with so few media rules as these, but i genuinely tried to design the structure of the page to require as little re-jigging as possible. i think i largely got away with it, but if this was a lazy or under-engineered approach i am happy to be told so! */
 /* also weird to find out you can't use CSS vars with media queries? odd */
 @media (max-width: 800px) {
+  header {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  #productBody .left {
+    width: 100%;
+  }
+  #nameBlock {
+    flex-flow: column nowrap; /* lazy solution, looks dodgy! */
+  }
   #productPageTop {
     flex-flow: column nowrap;
   }
   #productBody {
     flex-flow: column-reverse nowrap;
-  }
-}
-@media (max-width: 1200px) {
-  header {
-    padding-left: 15px;
-    padding-right: 15px;
   }
 }

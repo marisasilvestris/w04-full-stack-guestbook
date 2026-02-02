@@ -30,4 +30,9 @@ Photo by <a href="https://unsplash.com/@dada_design?utm_source=unsplash&utm_medi
 
 ## To improve
 
+## bügz:
+
+"name:" label and text field stack when on narrow viewports because of the half-assed method of mobile-ifying it
+slider thumbnails overflow container
+
 marisa 🐈‍⬛

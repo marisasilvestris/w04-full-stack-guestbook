@@ -22,7 +22,7 @@ function buildReview(username, rating, reviewText) {
             </div>
             <div class="right">
               <div class="rating">
-                <p>${rating}</p>
+                <p>rating: ${rating}</p>
               </div>
               <div class="review-text">
                 <p>${reviewText}</p>
