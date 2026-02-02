@@ -26,6 +26,8 @@ As always, comments in the code.
 
 ### Thanks to/image credits
 
+handy little css arrows trick courtesy of <a href="https://www.tutorialspoint.com/css/css_arrows.htm">tutorialspoint</a>
+
 Photo by <a href="https://unsplash.com/@cadop?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Mathew Schwartz</a> on <a href="https://unsplash.com/photos/greyscale-photography-of-skeleton-8rj4sz9YLCI?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>  
 Photo by <a href="https://unsplash.com/@sabinamusicrich?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Sabina Music Rich</a> on <a href="https://unsplash.com/photos/grayscale-photo-of-person-wearing-mask-OJy0JHnoUZQ?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>  
 Photo by <a href="https://unsplash.com/@bharath9110?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Bharath Kumar</a> on <a href="https://unsplash.com/photos/a-skeleton-with-a-crown-on-its-head-PSYTLQczflY?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>  
@@ -39,5 +41,6 @@ Photo by <a href="https://unsplash.com/@dada_design?utm_source=unsplash&utm_medi
 
 "name:" label and text field stack when on narrow viewports because of the half-assed method of mobile-ifying it
 slider thumbnails overflow container
+must add margin between <main> and sibling elements
 
 marisa 🐈‍⬛
