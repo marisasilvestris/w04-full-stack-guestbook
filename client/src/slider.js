@@ -1,6 +1,11 @@
 // leaving this array as-is rather than switching to a json import function because i don't have time to break everything
 const images = [
   {
+    title: "moon princess barbara battle",
+    src: "https://msnicelupe.neocities.org/vault/guestbook/product/elder%20barbara.webp",
+    alt: "alfalfa the cat, acting extremely Normal",
+  },
+  {
     title: "alfalfa",
     src: "https://msnicelupe.neocities.org/vault/guestbook/slider/cat0.webp",
     alt: "alfalfa the cat, acting extremely Normal",

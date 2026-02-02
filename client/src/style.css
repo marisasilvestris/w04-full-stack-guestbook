@@ -1,4 +1,6 @@
 :root {
+  --max-size: 1200px;
+
   --headerfont: "Montserrat Alternates", sans-serif;
   --bodyfont: "Montserrat";
 
@@ -11,6 +13,13 @@
   --pale: #d7cfe7;
   --grey: #6f6a7f;
 }
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
 .gradient-72 {
   background-image: linear-gradient(
     72deg,
@@ -36,14 +45,25 @@
   box-shadow: 2px 2px 8px rgba(255, 255, 255, 0.8);
 }
 .block {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 10px;
+  width: 100%;
+  padding: 10px;
   border: 1px solid var(--white);
   background-color: var(--lilac);
   border-radius: 3px;
 }
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+.block ul {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 5px;
+}
+.block li {
+  background-image: linear-gradient(90deg, var(--purple), var(--lilac));
+  width: 100%;
+  padding: 5px;
+  border-radius: 3px;
 }
 h1,
 h2,
@@ -64,19 +84,43 @@ body > * {
   margin: 0 auto;
 }
 
+button {
+  width: fit-content;
+  background-color: var(--purple);
+  color: var(--white);
+  padding: 10px;
+  border-radius: 3px;
+  border: 1px solid var(--purple);
+  text-transform: uppercase;
+}
+button:active {
+  background-color: var(--peony);
+}
+input,
+textarea {
+  background-color: var(--black);
+  color: var(--white);
+  border-radius: 3px;
+  padding: 5px;
+}
+input:focus,
+textarea:focus {
+  background-color: var(--white);
+  color: var(--black);
+}
+
 header {
   background-color: var(--lavender);
 }
 header nav {
-  max-width: 1200px;
+  max-width: var(--max-size);
   margin: 0 auto;
   padding: 15px 0 15px 0;
   text-transform: uppercase;
 }
 header nav ul {
-  list-style-type: none;
   display: flex;
-  flex-flow: row nowrap;
+  flex-flow: row wrap;
   align-items: center;
   gap: 15px;
 }
@@ -95,12 +139,15 @@ header nav img {
 }
 
 main {
-  max-width: 1200px;
+  max-width: var(--max-size);
   display: flex;
   flex-flow: column nowrap;
   gap: 15px;
 }
 #productPage {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 15px;
   color: var(--white);
 }
 #productPageTitle {
@@ -109,7 +156,6 @@ main {
 #productPageTop {
   display: flex;
   gap: 15px;
-  margin-bottom: 15px;
   padding: 15px;
   background-color: var(--grey);
 }
@@ -139,15 +185,22 @@ main {
   gap: 15px;
   padding: 15px;
   background-color: var(--grey);
+  font-family: var(--bodyfont);
 }
-#productBodyLeft {
+#productBody .left {
   width: 70%;
+}
+#productDesc {
+  display: flex; /* display:flex everything! hahaha! */
+  flex-flow: column nowrap;
+  gap: 15px;
 }
 .product-img {
   width: 100%;
 }
 
-#productBodyRight {
+#productBody .right {
+  flex-grow: 1;
 }
 #buyBtnContainer {
   width: 100%;
@@ -160,46 +213,44 @@ main {
   font-family: var(--bodyfont);
   align-items: center;
 }
-#buyBtnContainer #buyBtn {
-  background-color: var(--purple);
-  color: var(--white);
-  padding: 10px;
-  border-radius: 3px;
-  border: 1px solid var(--purple);
-  text-transform: uppercase;
-}
 
 /* review-form-specific style */
-#reviewsContainer * {
-  border: 1px solid var(--white);
-}
-
 #reviewForm {
   display: flex;
   flex-flow: column nowrap;
   gap: 15px; /* 15px just seems like a comfortable, sensible amount. you'll see me use it everywhere like a visual crutch */
   padding: 10px;
-  margin: 20px;
+  margin: 0 20px 0 20px;
   border: 1px solid var(--purple);
   background-color: var(--lavender);
   border-radius: 3px;
   font-family: var(--bodyfont);
 }
 #reviewForm label {
-  vertical-align: top;
+  text-transform: capitalize;
+  width: 75px;
 }
-#reviewForm span {
+#reviewForm div {
   display: flex;
   gap: 15px;
 }
-#reviewForm #reviewSpan textarea {
+#reviewForm #nameBlock {
+}
+#reviewForm #reviewBlock label {
+  align-self: start;
+}
+#reviewForm textarea {
   height: 15em;
   width: 100%;
-  max-width: 50em;
 }
 #reviewForm button {
+  align-self: end;
 }
 
+/* review-display-specific style */
+#reviewsContainer {
+  background-color: var(--grey);
+}
 #reviewsList {
   display: flex;
   flex-flow: column nowrap;
@@ -210,19 +261,55 @@ main {
 .review {
   display: flex;
   flex-flow: row nowrap;
-  background: lightblue;
+  border-radius: 3px;
+  padding: 15px;
+  background: var(--grey);
+  color: var(--white);
+  font-family: var(--bodyfont);
 }
 .review .left {
   flex-basis: 150px;
 }
+.review .left img {
+  width: 100px;
+  height: 100px;
+}
 .review .right {
   flex-grow: 1;
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 15px;
 }
 .review .username {
   font-family: "Montserrat Alternates", sans-serif;
   font-size: 14px;
+  overflow: none;
 }
 .review .rating {
 }
 .review .review-text {
+}
+
+footer {
+  font-family: var(--bodyfont);
+  background-color: var(--lavender);
+  color: var(--white);
+  padding: 30px;
+}
+
+/* yeah yeah don't get me wrong, i know at this point it seems like i'm abdicating the requirement of mobile-friendliness with so few media rules as these, but i genuinely tried to design the structure of the page to require as little re-jigging as possible. i think i largely got away with it, but if this was a lazy or under-engineered approach i am happy to be told so! */
+/* also weird to find out you can't use CSS vars with media queries? odd */
+@media (max-width: 800px) {
+  #productPageTop {
+    flex-flow: column nowrap;
+  }
+  #productBody {
+    flex-flow: column-reverse nowrap;
+  }
+}
+@media (max-width: 1200px) {
+  header {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
 }

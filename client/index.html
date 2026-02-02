@@ -41,10 +41,15 @@
     <main>
       <section id="productPage">
         <h1 id="productPageTitle">skeleton puncher xiv</h1>
+
+        <!-- PRODUCT TOP -->
         <div id="productPageTop" class="gradient-72">
           <div id="imgContainer"></div>
           <div id="productBrief">
-            <img id="productBriefImg" src="http://placecats.com/300/150" />
+            <img
+              id="productBriefImg"
+              src="https://msnicelupe.neocities.org/vault/guestbook/product/productimg.png"
+            />
             <div id="productBriefDesc">
               <p>a sinister presence lurks within all of us...</p>
               <p>
@@ -56,39 +61,59 @@
             </div>
           </div>
         </div>
+        <!-- PRODUCT TOP END -->
+
+        <!-- BUY BTN -->
         <div id="buyBtnContainer" class="gradient-72">
           <label for="buyBtn">Play Skeleton Puncher XIV</label>
           <button name="buyBtn" id="buyBtn" class="gradient-288">
             play now
           </button>
         </div>
+        <!-- BUY BTN END -->
+
+        <!-- FORM BLOCK -->
         <form name="reviewForm" id="reviewForm" class="gradient-72 drop-shadow">
           <h3>a review for yer trouble, guvna?</h3>
-          <span id="nameSpan">
-            <label for="name">name</label>
-            <input name="name" type="text" required />
-          </span>
+          <div id="nameBlock">
+            <label for="formName">name</label>
+            <input
+              id="formName"
+              name="name"
+              type="text"
+              placeholder="type ur name here pls!"
+              required
+            />
 
-          <span id="ratingSpan">
-            <label for="rating">rating</label>
-            <input name="rating" type="radio" value="1" required />
-            <input name="rating" type="radio" value="2" required />
-            <input name="rating" type="radio" value="3" required />
-            <input name="rating" type="radio" value="4" required />
-            <input name="rating" type="radio" value="5" required />
-          </span>
+            <div id="ratingBlock">
+              <label for="rating">rating</label>
+              <input name="rating" type="radio" value="1" required />
+              <input name="rating" type="radio" value="2" required />
+              <input name="rating" type="radio" value="3" required />
+              <input name="rating" type="radio" value="4" required />
+              <input name="rating" type="radio" value="5" required />
+            </div>
+          </div>
 
-          <span id="reviewSpan">
-            <label for="reviewText">review</label>
-            <textarea name="reviewText" required>
-type ur review here pls!</textarea
-            >
-          </span>
-
-          <button name="submitBtn" type="submit">i am buoton</button>
+          <div id="reviewBlock">
+            <label for="formReviewText">review</label>
+            <!-- not sure why this is missing a few pixels of width? -->
+            <textarea
+              id="formReviewText"
+              name="reviewText"
+              placeholder="type ur review here pls!"
+              required
+            ></textarea>
+          </div>
+          <button name="submitBtn" type="submit" class="gradient-288">
+            i am buoton
+          </button>
         </form>
+        <!-- FORM BLOCK END -->
+
+        <!-- PRODUCT BODY -->
         <div id="productBody">
-          <div id="productBodyLeft">
+          <div class="left">
             <div id="productDesc">
               <h3>About This Game</h3>
               <img src="http://placecats.com/1200/250" class="product-img" />
@@ -98,18 +123,33 @@ type ur review here pls!</textarea
               </p>
               <h4>sternum-pounding action!</h4>
               <img src="http://placecats.com/1200/250" class="product-img" />
-              <p></p>
+              <p>The Great Bonelord Liliana has awakened, and all</p>
               <h4>pvp mode!</h4>
               <img src="http://placecats.com/1200/250" class="product-img" />
               <p></p>
             </div>
           </div>
-          <div id="productBodyRight">
-            <div class="block">testing block</div>
+          <div class="right">
+            <div class="block gradient-72">
+              <p>Features:</p>
+              <ul>
+                <li>Single-player</li>
+                <li>Multi-player</li>
+                <li>Omni-player</li>
+                <li>Smog Achievements</li>
+                <li>Smog Workshop</li>
+                <li>Smog Cloud <sup>*cough cough*</sup></li>
+              </ul>
+              <p>Controller Support:</p>
+              <ul>
+                <li>ex-bone controller</li>
+              </ul>
+            </div>
           </div>
         </div>
+        <!-- PRODUCT BODY END-->
       </section>
-      <section id="reviewsContainer">
+      <section id="reviewsContainer" class="gradient-72">
         <ul id="reviewsList">
           <li class="review">
             <div class="left">
@@ -120,7 +160,7 @@ type ur review here pls!</textarea
             </div>
             <div class="right">
               <div class="rating">
-                <p>5</p>
+                <p>rating: <span>5</span></p>
               </div>
               <div class="review-text">
                 <p>reviw text defautl</p>
@@ -130,5 +170,8 @@ type ur review here pls!</textarea
         </ul>
       </section>
     </main>
+    <footer class="gradient-180">
+      <p>Steam is © Valve Software</p>
+    </footer>
   </body>
 </html>

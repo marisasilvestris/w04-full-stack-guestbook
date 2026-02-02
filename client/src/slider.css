@@ -14,10 +14,13 @@
   object-fit: cover;
   aspect-ratio: 16 / 9;
 }
+
 #leftBtn,
 #rightBtn {
   width: 0;
   height: 0;
+  padding: 0;
+  border-radius: 0;
   background-color: transparent;
   align-self: center;
   position: absolute;
@@ -35,6 +38,7 @@
   border-bottom: 50px solid transparent;
   border-left: 30px solid rgba(254, 254, 254, 0.5);
 }
+
 #imgThumbs {
   display: flex;
   overflow-x: scroll;
