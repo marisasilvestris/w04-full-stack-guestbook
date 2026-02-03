@@ -17,7 +17,6 @@ function sanitise(str) {
   str = str.replaceAll("'", "");
   return str;
 }
-console.log(sanitise("test  --"));
 function buildReview(username, rating, reviewText) {
   const reviewItem = document.createElement(`li`);
   reviewItem.classList.add(`review`);

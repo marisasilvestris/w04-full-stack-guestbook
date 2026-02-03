@@ -24,6 +24,10 @@
 
 Boy, I really gotta start reining it in at some point, huh?
 
+I think that might genuinely be all I have to say about this one. I was lucky, very lucky, that I managed to get the server/client stuff set up quite quickly and easily, a minor stumble here and there with an .env issue and not quite following the logic sometimes. Tbh there's still a lot I don't understand, as far as more complex behaviours go.
+
+Ya might've guessed it, but it's the bells and whistles I got carried away with. Figured if I was going to parody a Steam product page I might as well make it look good.
+
 As always, comments in the code.
 
 ### Thanks to/image credits
@@ -37,7 +41,9 @@ Photo by <a href="https://unsplash.com/@sabinamusicrich?utm_source=unsplash&utm_
 Photo by <a href="https://unsplash.com/@bharath9110?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Bharath Kumar</a> on <a href="https://unsplash.com/photos/a-skeleton-with-a-crown-on-its-head-PSYTLQczflY?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>  
 Photo by <a href="https://unsplash.com/@dada_design?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">dada_design</a> on <a href="https://unsplash.com/photos/a-skeleton-laying-on-its-back-on-a-pink-surface-RpP6NZcdhUY?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>  
 Photo by <a href="https://unsplash.com/@shionadas?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Shiona Das</a> on <a href="https://unsplash.com/photos/a-white-skull-sitting-next-to-a-tree-z6aqZJ9upJM?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>  
-Photo by <a href="https://unsplash.com/@vixenly?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Kym MacKinnon</a> on <a href="https://unsplash.com/photos/a-skeleton-hanging-from-a-tree-with-blue-hair-eQqcz7NWyH4?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+Photo by <a href="https://unsplash.com/@vixenly?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Kym MacKinnon</a> on <a href="https://unsplash.com/photos/a-skeleton-hanging-from-a-tree-with-blue-hair-eQqcz7NWyH4?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>  
+Photo by <a href="https://unsplash.com/@notafraid?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Paul Cuoco</a> on <a href="https://unsplash.com/photos/green-and-black-dragon-figurine-JZOyQluj8eY?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>  
+Photo by <a href="https://unsplash.com/@dtrinksrph?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">David Trinks</a> on <a href="https://unsplash.com/photos/a-skeleton-with-wide-blue-eyes-and-open-mouth-LJWdsZjhtSI?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
 
 ## To improve
 
@@ -50,6 +56,5 @@ Even if it's for nobody by that point, I still intend to write some BS marketing
 
 "name:" label and text field stack when on narrow viewports because of the half-assed method of mobile-ifying it
 slider thumbnails overflow container
-must add margin between <main> and sibling elements
 
 marisa 🐈‍⬛

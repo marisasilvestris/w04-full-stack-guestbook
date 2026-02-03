@@ -170,6 +170,7 @@ main {
   display: flex;
   flex-flow: column nowrap;
   gap: 15px;
+  line-height: 1.5em;
 }
 
 #productBody {
@@ -187,6 +188,8 @@ main {
   display: flex; /* display:flex everything! hahaha! */
   flex-flow: column nowrap;
   gap: 15px;
+}
+#productDesc p {
 }
 .product-img {
   width: 100%;

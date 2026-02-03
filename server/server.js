@@ -25,8 +25,6 @@ app.get("/reviews", async (req, res) => {
 
 app.post("/reviews", async (req, res) => {
   const userData = req.body;
-  console.log(userData);
-
   const dbQuery = await db.query(
     `INSERT INTO reviews (name, rating, reviewText) VALUES ($1, $2, $3)`,
     [userData.name, Number(userData.rating), userData.reviewText],

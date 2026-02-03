@@ -1,9 +1,9 @@
 // leaving this array as-is rather than switching to a json import function because i don't have time to break everything
 const images = [
   {
-    title: "moon princess barbara battle",
+    title: "moon princess barbara",
     src: "https://msnicelupe.neocities.org/vault/guestbook/product/elder%20barbara.webp",
-    alt: "get 'er, bonelad!",
+    alt: "babs battle",
   },
   {
     title: "you died",
@@ -13,7 +13,12 @@ const images = [
   {
     title: "liliana, champion of the dead",
     src: "https://msnicelupe.neocities.org/vault/guestbook/product/liliana.webp",
-    alt: "zimmerman the cat, a lovely marshmallow boy lounging lazily on a rug and gazing just off frame.",
+    alt: "bonelord liliana battle",
+  },
+  {
+    title: "un-bone-lievable. unbelieva-bone. one of those.",
+    src: "https://msnicelupe.neocities.org/vault/guestbook/product/bone-orb2.webp",
+    alt: "bone ball comin' atcha",
   },
 ];
 
