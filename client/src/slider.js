@@ -11,8 +11,8 @@ const images = [
     alt: "got no bones left",
   },
   {
-    title: "zimmerman",
-    src: "https://msnicelupe.neocities.org/vault/guestbook/slider/cat2.webp",
+    title: "liliana, champion of the dead",
+    src: "https://msnicelupe.neocities.org/vault/guestbook/product/liliana.webp",
     alt: "zimmerman the cat, a lovely marshmallow boy lounging lazily on a rug and gazing just off frame.",
   },
 ];

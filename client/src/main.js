@@ -1,6 +1,7 @@
 const display = document.getElementById(`reviewsList`);
 const form = document.getElementById(`reviewForm`);
 
+/* wish i'd done this wih local environment variables, i keep forgetting to swap them when i push */
 const baseURL = `https://w04-full-stack-guestbook.onrender.com`;
 // const baseURL = `http://localhost:8080`;
 
@@ -10,13 +11,20 @@ async function fetchData() {
 
   return messages;
 }
-
+function sanitise(str) {
+  /* weak way to do this, want to find out a much better solution */
+  str = str.replaceAll(" ", "-");
+  str = str.replaceAll("'", "");
+  return str;
+}
+console.log(sanitise("test  --"));
 function buildReview(username, rating, reviewText) {
   const reviewItem = document.createElement(`li`);
   reviewItem.classList.add(`review`);
+  reviewItem.classList.add(`${sanitise(username).toLowerCase()}`);
   reviewItem.innerHTML = `<div class="left">
-              <div class="username ${username}">
-                <img src="#" />
+              <div class="username">
+                <div class="profile-pic"></div>
                 <p>${username}</p>
               </div>
             </div>

@@ -1,3 +1,4 @@
+/* this entire file is just messy tbh*/
 :root {
   --max-size: 1200px;
 
@@ -42,28 +43,7 @@
   );
 }
 .drop-shadow {
-  box-shadow: 2px 2px 8px rgba(255, 255, 255, 0.8);
-}
-.block {
-  display: flex;
-  flex-flow: column nowrap;
-  gap: 10px;
-  width: 100%;
-  padding: 10px;
-  border: 1px solid var(--white);
-  background-color: var(--lilac);
-  border-radius: 3px;
-}
-.block ul {
-  display: flex;
-  flex-flow: column nowrap;
-  gap: 5px;
-}
-.block li {
-  background-image: linear-gradient(90deg, var(--purple), var(--lilac));
-  width: 100%;
-  padding: 5px;
-  border-radius: 3px;
+  box-shadow: 2px 2px 8px rgba(255, 255, 255, 0.5);
 }
 h1,
 h2,
@@ -98,15 +78,26 @@ button:active {
 }
 input,
 textarea {
-  background-color: var(--black);
+  background-color: var(--grey);
   color: var(--white);
   border-radius: 3px;
   padding: 5px;
 }
+input::placeholder,
+textarea::placeholder {
+  color: var(--white);
+}
 input:focus,
 textarea:focus {
   background-color: var(--white);
+  color: var(--grey);
+}
+input:focus::placeholder,
+textarea:focus::placeholder {
   color: var(--black);
+}
+input[type="radio"] {
+  color: black;
 }
 
 header {
@@ -143,6 +134,8 @@ main {
   display: flex;
   flex-flow: column nowrap;
   gap: 15px;
+  margin-top: 15px;
+  margin-bottom: 15px;
 }
 #productPage {
   display: flex;
@@ -203,7 +196,7 @@ main {
   flex-grow: 1;
 }
 #buyBtnContainer {
-  width: 100%;
+  margin: 0 15px;
   border-radius: 3px;
   padding: 15px;
   background-color: var(--lilac);
@@ -214,38 +207,51 @@ main {
   align-items: center;
 }
 
-/* review-form-specific style */
-#reviewForm {
+.block {
   display: flex;
   flex-flow: column nowrap;
-  gap: 15px; /* 15px just seems like a comfortable, sensible amount. you'll see me use it everywhere like a visual crutch */
+  gap: 15px;
   padding: 10px;
-  margin: 0 0 15px 0;
-  border: 1px solid var(--purple);
-  background-color: var(--lavender);
+  border: 1px solid var(--white);
+  background-color: var(--lilac);
   border-radius: 3px;
   font-family: var(--bodyfont);
+  color: var(--white);
 }
-#reviewForm label {
+.block ul {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 5px;
+}
+.block li {
+  background-image: linear-gradient(90deg, var(--purple), var(--lilac));
+  width: 100%;
+  padding: 5px;
+  border-radius: 3px;
+}
+.block label {
   text-transform: capitalize;
   width: 75px;
   align-self: center;
 }
-#reviewForm div {
+.block div {
   display: flex;
   gap: 15px;
 }
-#reviewForm #nameBlock {
+.block #nameBlock {
 }
-#reviewForm #reviewBlock label {
+.block #reviewBlock label {
   align-self: start;
 }
-#reviewForm textarea {
+.block textarea {
   height: 15em;
   width: 100%;
 }
-#reviewForm button {
+.block button {
   align-self: end;
+}
+#reviewForm {
+  margin: 0 15px;
 }
 
 /* review-display-specific style */
@@ -269,14 +275,22 @@ main {
   font-family: var(--bodyfont);
 }
 .review .left {
-  flex-basis: 150px;
+  width: 150px;
+  overflow: hidden;
+  flex-grow: 0;
+  flex-shrink: 0;
 }
-.review .left img {
+.review .profile-pic {
   width: 100px;
   height: 100px;
+  background-color: var(--peony);
+  background-size: cover;
+  background-position: center;
+  background-image: url("https://msnicelupe.neocities.org/vault/guestbook/pfps/hardcoded.png");
 }
 .review .right {
   flex-grow: 1;
+  flex-shrink: 1;
   display: flex;
   flex-flow: column nowrap;
   gap: 15px;
@@ -284,7 +298,7 @@ main {
 .review .username {
   font-family: "Montserrat Alternates", sans-serif;
   font-size: 14px;
-  overflow: none;
+  overflow: hidden;
 }
 .review .rating {
 }
@@ -297,12 +311,16 @@ footer {
   color: var(--white);
   padding: 30px;
 }
+footer div {
+  max-width: var(--max-size);
+  margin: 0 auto;
+}
 
 /* yeah yeah don't get me wrong, i know at this point it seems like i'm abdicating the requirement of mobile-friendliness with so few media rules as these, but i genuinely tried to design the structure of the page to require as little re-jigging as possible. i think i largely got away with it, but if this was a lazy or under-engineered approach i am happy to be told so! */
 /* also weird to find out you can't use CSS vars with media queries? odd */
 @media (max-width: 800px) {
   header {
-    padding-left: 15px;
+    padding-left: 15px; /* shoddy! */
     padding-right: 15px;
   }
   #productBody .left {
@@ -312,7 +330,7 @@ footer {
     flex-flow: column nowrap; /* lazy solution, looks dodgy! */
   }
   #productPageTop {
-    flex-flow: column nowrap;
+    flex-flow: column-reverse nowrap;
   }
   #productBody {
     flex-flow: column-reverse nowrap;

@@ -2,15 +2,14 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <!-- <link rel="icon" type="image/ico" href="/smog.ico" /> -->
-    <link rel="icon" type="image/ico" href="/favicon-dev.ico" />
-    <!-- <link rel="icon" type="image/ico" href="/favicon.ico" /> -->
+    <link rel="icon" type="image/ico" href="/favicon.ico" />
     <link rel="stylesheet" href="./src/style.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script type="module" src="./src/main.js" defer></script>
     <script type="module" src="./src/slider.js" defer></script>
     <!-- remember this guy? -->
     <link rel="stylesheet" href="./src/slider.css" />
+    <link rel="stylesheet" href="./src/pfps.css" />
     <title>Review Client</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -77,21 +76,30 @@
           <div class="left">
             <div id="productDesc">
               <h3>About This Game</h3>
-              <img src="http://placecats.com/1200/250" class="product-img" />
+              <img
+                src="https://msnicelupe.neocities.org/vault/guestbook/product/faceyourefears.png"
+                class="product-img"
+              />
               <p>
                 the skeletons are atacking! fend them littel rascals off w/ ur
                 bear fists
               </p>
               <h4>sternum-pounding action!</h4>
-              <img src="http://placecats.com/1200/250" class="product-img" />
+              <img
+                src="https://msnicelupe.neocities.org/vault/guestbook/product/killthemoon.png"
+                class="product-img"
+              />
               <p>The Great Bonelord Liliana has awakened, and all</p>
               <h4>pvp mode!</h4>
-              <img src="http://placecats.com/1200/250" class="product-img" />
+              <img
+                src="https://msnicelupe.neocities.org/vault/guestbook/product/beatyourefriends.png"
+                class="product-img"
+              />
               <p>take on ur friends in epic 1v1v1v1v1 competition battles!</p>
             </div>
           </div>
           <div class="right">
-            <div class="block gradient-72">
+            <div class="block gradient-72 drop-shadow">
               <p>Features:</p>
               <ul>
                 <li>Single-player</li>
@@ -110,52 +118,56 @@
         </div>
         <!-- PRODUCT BODY END-->
       </section>
+      <!-- FORM BLOCK -->
+      <!-- i kinda struggled with where to pop this. on the one hand i wanted the steam-like layout, but honestly to me it makes way more sense for it to be above the reviewsList. still, it can be moved around quite easily. -->
+      <form
+        name="reviewForm"
+        id="reviewForm"
+        class="gradient-72 block drop-shadow"
+      >
+        <h3>Review this product</h3>
+        <div id="nameBlock">
+          <label for="formName">name</label>
+          <input
+            id="formName"
+            name="name"
+            type="text"
+            placeholder="type ur name here pls!"
+            required
+          />
+
+          <div id="ratingBlock">
+            <label for="rating">rating</label>
+            <input name="rating" type="radio" value="1" required />
+            <input name="rating" type="radio" value="2" required />
+            <input name="rating" type="radio" value="3" required />
+            <input name="rating" type="radio" value="4" required />
+            <input name="rating" type="radio" value="5" required />
+          </div>
+        </div>
+
+        <div id="reviewBlock">
+          <label for="formReviewText">review</label>
+          <!-- not sure why this is missing a few pixels of width? -->
+          <textarea
+            id="formReviewText"
+            name="reviewText"
+            placeholder="type ur review here pls!"
+            required
+          ></textarea>
+        </div>
+        <button name="submitBtn" type="submit" class="gradient-288">
+          Submit
+        </button>
+      </form>
+      <!-- FORM BLOCK END -->
+
       <section id="reviewsContainer" class="gradient-72">
-        <!-- FORM BLOCK -->
-        <!-- i kinda struggled with where to pop this. on the one hand i wanted the steam-like layout, but honestly to me it makes way more sense for it to be above the reviewsList. still, it can be moved around quite easily. -->
-        <form name="reviewForm" id="reviewForm" class="gradient-72">
-          <h3>Review this product</h3>
-          <div id="nameBlock">
-            <label for="formName">name</label>
-            <input
-              id="formName"
-              name="name"
-              type="text"
-              placeholder="type ur name here pls!"
-              required
-            />
-
-            <div id="ratingBlock">
-              <label for="rating">rating</label>
-              <input name="rating" type="radio" value="1" required />
-              <input name="rating" type="radio" value="2" required />
-              <input name="rating" type="radio" value="3" required />
-              <input name="rating" type="radio" value="4" required />
-              <input name="rating" type="radio" value="5" required />
-            </div>
-          </div>
-
-          <div id="reviewBlock">
-            <label for="formReviewText">review</label>
-            <!-- not sure why this is missing a few pixels of width? -->
-            <textarea
-              id="formReviewText"
-              name="reviewText"
-              placeholder="type ur review here pls!"
-              required
-            ></textarea>
-          </div>
-          <button name="submitBtn" type="submit" class="gradient-288">
-            Submit
-          </button>
-        </form>
-        <!-- FORM BLOCK END -->
-
         <ul id="reviewsList">
-          <li class="review">
+          <li class="review hardcoded">
             <div class="left">
               <div class="username">
-                <img src="#" />
+                <div class="profile-pic"></div>
                 <p>I Am A Hardcoded Listing</p>
               </div>
             </div>
@@ -172,7 +184,9 @@
       </section>
     </main>
     <footer class="gradient-180">
-      <p>Steam is ™ Valve Software, but Smog is all mine, baybee!</p>
+      <div>
+        <p>© nobody, just be kind.</p>
+      </div>
     </footer>
   </body>
 </html>
