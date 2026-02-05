@@ -20,6 +20,11 @@ const images = [
     src: "https://msnicelupe.neocities.org/vault/guestbook/product/bone-orb2.webp",
     alt: "bone ball comin' atcha",
   },
+  {
+    title: "spooky scary steven",
+    src: "https://msnicelupe.neocities.org/vault/guestbook/product/bony-steve.webp",
+    alt: "it's just a guy. a guy of bones. you've read this far, you know the deal.",
+  },
 ];
 
 // setting up
